@@ -1,0 +1,20 @@
+{
+    repositoryOwner(login: "MPiotrowska") {
+      ... on ProfileOwner {
+        pinnedItemsRemaining
+        itemShowcase {
+          items(first: 5) {
+            totalCount
+            edges {
+              node {
+                ... on Repository {
+                  name
+                }
+              }
+            }
+          }
+          hasPinnedItems
+        }
+      }
+    }
+  }
