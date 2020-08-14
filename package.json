@@ -5,11 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "next": "9.3.5",
+    "next-on-netlify": "^2.3.2",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
 }
+
+
