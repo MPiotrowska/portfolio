@@ -1,0 +1,13 @@
+{
+    "intro": {
+        "heading": "Hi, I'm Monika!",
+        "subHeading": "I love building stuff!"
+    },
+    "profile": "Creative and driven individual who is passionate, curious and excited by new technologies, I'm currently working as a freelance developer and getting exposed to various frontend frameworks and technologies to enhance my skill set. I am a fast learner with attention to detail as well as great interpersonal skills and a relaxed temperament.",
+    "profile_sub": "I am a fast learner with attention to detail as well as great interpersonal skills and a relaxed temperament. ",
+    "navigation": {
+        "linkedin":"linkedin.com/in/monika-piotrowska-660a5b4a/",
+        "github": "https://github.com/MPiotrowska",
+        "twitter": "https://twitter.com/PiotrowsMonika"
+    }
+}
