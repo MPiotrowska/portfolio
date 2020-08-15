@@ -3,9 +3,12 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import Repo from "../components/Repo";
+import content from '../content.json'
 
 export default function Home() {
   const [repos, setRepos] = React.useState([]);
+
+  const year = new Date().getFullYear();
 
   React.useEffect(() => {
     const url = "https://api.github.com/users/MPiotrowska/starred?per_page=10";
@@ -23,36 +26,33 @@ export default function Home() {
         <title>Monika Piotrowska | Frontend Developer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <section
         style={{ maxWidth: "36rem", margin: "auto" }}
-        className={utilStyles.headingMd}
+        className={`${utilStyles.headingMd} grid`}
       >
-        <p>Hi, I'm Monika!</p>
-        <p>I love building stuff!</p>
+       <p className="intro-paragraph" >{content.profile}</p>
       </section>
 
       <main>
         <div className="grid">
           {repos.length > 0 &&
             repos.map((repo) => {
-              return <Repo name={repo.name} />;
+              return (
+                <Repo key={repo.id} name={repo.name} url={repo.html_url} />
+              );
             })}
         </div>
       </main>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/images/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
+        <p>&copy; Monika Piotrowska {year}</p>
       </footer>
 
       <style jsx>{`
+        .intro-paragraph {
+          font-size: 18px;
+          text-align: center;
+        }
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -63,7 +63,7 @@ export default function Home() {
         }
 
         main {
-          padding: 5rem 0;
+          padding: 0 0 5rem;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -71,20 +71,10 @@ export default function Home() {
           align-items: center;
         }
 
-        footer {
+        footer{
           width: 100%;
           height: 100px;
           border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
           display: flex;
           justify-content: center;
           align-items: center;

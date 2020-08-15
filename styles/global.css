@@ -12,13 +12,19 @@ body {
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
-  color: #0070f3;
+  color: #5a5b5d;
   text-decoration: none;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #212122;
 }
 
 img {
