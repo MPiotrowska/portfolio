@@ -1,6 +1,11 @@
 const Repo = (props) => {
   return (
-    <a href="https://nextjs.org/docs" className="card">
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href={props.url}
+      className="card"
+    >
       <h4>{props.name} &rarr;</h4>
     </a>
   );
