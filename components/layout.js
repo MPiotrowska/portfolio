@@ -28,17 +28,19 @@ export default function Layout({ children }) {
             <ul className={styles.socialLinks}>
               <li>
                 <Link href={content.navigation.github}>
-                  <a>Github</a>
+                  <a><img width="20" height="20" src="images/github.svg" alt="github logo"/></a>
                 </Link>
               </li>
               <li>
                 <Link href={content.navigation.linkedin}>
-                  <a>Linkedin</a>
+                  <a>
+                    <img width="20" height="20" src="images/linkedin.svg" alt="Linkedin logo"/>
+                    </a>
                 </Link>
               </li>
               <li>
                 <Link href={content.navigation.twitter}>
-                  <a>Twitter</a>
+                  <a><img width="20" height="20" src="images/twitter.svg" alt="twitter logo"/></a>
                 </Link>
               </li>
             </ul>
