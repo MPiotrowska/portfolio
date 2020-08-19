@@ -9,5 +9,27 @@
         "linkedin":"https://www.linkedin.com/in/monika-piotrowska-660a5b4a/",
         "github": "https://github.com/MPiotrowska",
         "twitter": "https://twitter.com/PiotrowsMonika"
+    },
+    "repos": {
+        "266368775": {
+            "title": "Landing page",
+            "description": "This project was build usingt ES6 and Sass.",
+            "live_url": "https://monia-landing-page.netlify.app/"
+        },
+        "275899585": {
+            "title": "Weather app",
+            "description": "Weather app build with Create React App using the openweathermap api.",
+            "live_url": "https://weather-web-app-react.netlify.app/"
+        },
+        "281733001": {
+            "title": "Airbnb clone",
+            "description": "Airbnb clone site build with React and context API for state management.",
+            "live_url": "https://mini-airbnb.netlify.app/"
+        },
+        "287553898": {
+            "title": "My portolio site, built on NextJS.",
+            "description": "My portfolio build with React and Nextjs",
+            "live_url": "https://www.monia.dev/"
+        }
     }
 }

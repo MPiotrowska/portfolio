@@ -45,13 +45,6 @@ img {
     transition: color 0.15s ease, border-color 0.15s ease;
   }
 
-  .card:hover,
-  .card:focus,
-  .card:active {
-    color: #0070f3;
-    border-color: #0070f3;
-  }
-
   .card h3 {
     margin: 0 0 1rem 0;
     font-size: 1.5rem;
@@ -59,6 +52,27 @@ img {
 
   .card p {
     margin: 0;
-    font-size: .75rem;
-    line-height: 1.5;
+    font-size: .95rem;
+    line-height: 1.8;
+  }
+
+  .cardFooter {
+    display:flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .cardButton {
+    padding: 6px 16px;
+    background: transparent;
+    border-radius: 5px;
+    min-width: 100px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .cardButton:hover {
+    color: white;
+    background: #5c95ac ;
   }

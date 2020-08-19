@@ -3,7 +3,7 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import Repo from "../components/Repo";
-import content from '../content.json'
+import content from "../content.json";
 
 export default function Home() {
   const [repos, setRepos] = React.useState([]);
@@ -15,7 +15,6 @@ export default function Home() {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setRepos(data);
       });
   }, []);
@@ -27,18 +26,28 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section
-        style={{ maxWidth: "36rem", margin: "auto" }}
+        style={{ maxWidth: "44rem", margin: "auto", padding: "0 60px" }}
         className={`${utilStyles.headingMd} grid`}
       >
-       <p className="intro-paragraph" >{content.profile}</p>
+        <p className="intro-paragraph">{content.profile}</p>
       </section>
 
       <main>
+        <h2>Projects</h2>
         <div className="grid">
           {repos.length > 0 &&
             repos.map((repo) => {
+              const repoDescription = content.repos[repo.id].description;
+              const repoDomain = content.repos[repo.id].live_url;
+              const repoTitle = content.repos[repo.id].title;
               return (
-                <Repo key={repo.id} name={repo.name} url={repo.html_url} />
+                <Repo
+                  key={repo.id}
+                  name={repoTitle}
+                  url={repo.html_url}
+                  description={repoDescription}
+                  liveSite={repoDomain}
+                />
               );
             })}
         </div>
@@ -71,7 +80,7 @@ export default function Home() {
           align-items: center;
         }
 
-        footer{
+        footer {
           width: 100%;
           height: 100px;
           border-top: 1px solid #eaeaea;
@@ -126,9 +135,7 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
+          max-width: 1200px;
         }
 
         .logo {

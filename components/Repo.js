@@ -1,13 +1,17 @@
 const Repo = (props) => {
   return (
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href={props.url}
-      className="card"
-    >
-      <h4>{props.name} &rarr;</h4>
-    </a>
+    <article className="card">
+      <h4>{props.name}</h4>
+      <p>{props.description}</p>
+      <footer className="cardFooter">
+        <a className="cardButton" target="_blank" rel="noopener noreferrer" href={props.liveSite}>
+          Live Site
+        </a>
+        <a className="cardButton" target="_blank" rel="noopener noreferrer" href={props.url}>
+          Code
+        </a>
+      </footer>
+    </article>
   );
 };
 
