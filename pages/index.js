@@ -26,7 +26,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section
-        style={{ maxWidth: "44rem", margin: "auto", padding: "0 60px" }}
+        style={{ maxWidth: "44rem", margin: "auto", padding: "0 25px" }}
         className={`${utilStyles.headingMd} grid`}
       >
         <p className="intro-paragraph">{content.profile}</p>
@@ -40,6 +40,7 @@ export default function Home() {
               const repoDescription = content.repos[repo.id].description;
               const repoDomain = content.repos[repo.id].live_url;
               const repoTitle = content.repos[repo.id].title;
+              const tech = content.repos[repo.id].technologies;
               return (
                 <Repo
                   key={repo.id}
@@ -47,6 +48,7 @@ export default function Home() {
                   url={repo.html_url}
                   description={repoDescription}
                   liveSite={repoDomain}
+                  technologies={tech}
                 />
               );
             })}
