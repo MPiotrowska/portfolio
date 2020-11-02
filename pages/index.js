@@ -6,26 +6,25 @@ import Repo from "../components/Repo";
 import content from "../content.json";
 
 export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
+  const test = content;
   const url = "https://api.github.com/users/MPiotrowska/starred?per_page=10";
   const response = await fetch(url);
   const repos = await response.json();
 
-  // By returning { props: posts }, the Blog component
-  // will receive `posts` as a prop at build time
   return {
     props: {
       repos,
+      content: test,
     },
     revalidate: 1,
   };
 }
 
-export default function Home({ repos }) {
+export default function Home({ repos, content }) {
   const year = new Date().getFullYear();
 
   React.useEffect(() => {
-    console.log(repos);
+    console.log(content);
   }, []);
 
   return (
@@ -49,8 +48,7 @@ export default function Home({ repos }) {
             const repoDescription = content.repos[repo.id].description || "N/A";
 
             const repoDomain =
-              (content & content.repos && content.repos[repo.id].live_url) ||
-              "https://monia.dev";
+              content.repos[repo.id].live_url || "https://monia.dev";
 
             const repoTitle =
               (repo.id &&
@@ -74,33 +72,6 @@ export default function Home({ repos }) {
               />
             );
           })}
-          {/* {repos && repos.length > 0 ?
-            repos.map((repo) => {
-              console.log(repo.id)
-              const repoDescription =
-                (repo.id && content && content.repos && content.repos[repo.id]) || "N/A";
-              content.repos[repo.id].description || "N/A";
-              const repoDomain =
-                (content & content.repos && content.repos[repo.id]) || "N/A";
-              content.repos[repo.id].live_url || "N/A";
-              const repoTitle =
-                (repo.id && content && content.repos && content.repos[repo.id]) || "N/A";
-              content.repos[repo.id].title || "N/A";
-              const tech =
-                (repo.id && content && content.repos && content.repos[repo.id]) || "N/A";
-              content.repos[repo.id].technologies || "N/A";
-              return (
-                <Repo
-                  key={repo.id}
-                  name={repoTitle}
-                  url={repo.html_url}
-                  description={repoDescription || 'N/A'}
-                  liveSite={repoDomain}
-                  technologies={tech}
-                />
-              );
-            }) : <p>Loading...</p>
-          } */}
         </div>
       </main>
 
