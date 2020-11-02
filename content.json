@@ -34,6 +34,12 @@
             "title": "My portolio site, built on NextJS.",
             "description": "My portfolio build with React and Nextjs. I'll be updating it regularly with all new projects.",
             "live_url": "https://www.monia.dev/"
+        },
+        "307406324": {
+            "technologies": ["react.svg", "js.svg", "css.svg"],
+            "title": "A quiz application",
+            "description": "A trivia app built using Create React App.",
+            "live_url": "https://monika-quiz-app.netlify.app/"
         }
     }
 }

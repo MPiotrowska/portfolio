@@ -41,20 +41,20 @@ export default function Home({ repos, content }) {
         <div className="grid">
           {repos.map((repo) => {
             
-            const repoDescription = content.repos[repo.id].description || "N/A";
+            const repoDescription = content.repos[repo.id]  && content.repos[repo.id].description || "N/A";
 
             const repoDomain =
-              content.repos[repo.id].live_url || "https://monia.dev";
+              content.repos[repo.id]  && content.repos[repo.id].live_url || "https://monia.dev";
 
             const repoTitle =
               (repo.id &&
                 content &&
                 content.repos &&
-                content.repos[repo.id].title) ||
+                content.repos[repo.id]  && content.repos[repo.id].title) ||
               "N/A";
 
             const tech =
-              (repo.id && content && content.repos && content.repos[repo.id]) ||
+              (repo.id && content && content.repos && content.repos[repo.id]  && content.repos[repo.id].technologies) ||
               "N/A";
 
             return (
