@@ -1,16 +1,16 @@
 const Repo = (props) => {
-  console.log(props)
+  
   return (
     props && (
       <article className="card">
         <header className="cardHeader">
           <h4>{props.name}</h4>
           <span className="techIcons">
-            {/* {props.technologies.map((tech) => {
+            {props.technologies.map((tech) => {
               return (
                 <img width="20" height="20" src={`images/${tech}`} alt="" />
               );
-            })} */}
+            })}
           </span>
         </header>
 

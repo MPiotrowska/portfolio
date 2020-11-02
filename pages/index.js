@@ -23,10 +23,6 @@ export async function getStaticProps() {
 export default function Home({ repos, content }) {
   const year = new Date().getFullYear();
 
-  React.useEffect(() => {
-    console.log(content);
-  }, []);
-
   return (
     <Layout>
       <Head>
@@ -44,7 +40,7 @@ export default function Home({ repos, content }) {
         <h2>Projects</h2>
         <div className="grid">
           {repos.map((repo) => {
-            console.log(repo.html_url);
+            
             const repoDescription = content.repos[repo.id].description || "N/A";
 
             const repoDomain =
