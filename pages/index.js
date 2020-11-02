@@ -38,23 +38,23 @@ export default function Home() {
           {repos.length > 0 &&
             repos.map((repo) => {
               const repoDescription =
-                (content && content.repos && content.repos[repo.id]) || "N/A";
+                (repo.id && content && content.repos && content.repos[repo.id]) || "N/A";
               content.repos[repo.id].description || "N/A";
               const repoDomain =
                 (content & content.repos && content.repos[repo.id]) || "N/A";
               content.repos[repo.id].live_url || "N/A";
               const repoTitle =
-                (content && content.repos && content.repos[repo.id]) || "N/A";
+                (repo.id && content && content.repos && content.repos[repo.id]) || "N/A";
               content.repos[repo.id].title || "N/A";
               const tech =
-                (content && content.repos && content.repos[repo.id]) || "N/A";
+                (repo.id && content && content.repos && content.repos[repo.id]) || "N/A";
               content.repos[repo.id].technologies || "N/A";
               return (
                 <Repo
                   key={repo.id}
                   name={repoTitle}
                   url={repo.html_url}
-                  description={repoDescription}
+                  description={repoDescription || 'N/A'}
                   liveSite={repoDomain}
                   technologies={tech}
                 />
