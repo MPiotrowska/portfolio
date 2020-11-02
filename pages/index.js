@@ -37,10 +37,18 @@ export default function Home() {
         <div className="grid">
           {repos.length > 0 &&
             repos.map((repo) => {
-              const repoDescription = content.repos[repo.id].description;
-              const repoDomain = content.repos[repo.id].live_url;
-              const repoTitle = content.repos[repo.id].title;
-              const tech = content.repos[repo.id].technologies;
+              const repoDescription =
+                (content && content.repos && content.repos[repo.id]) || "N/A";
+              content.repos[repo.id].description || "N/A";
+              const repoDomain =
+                (content & content.repos && content.repos[repo.id]) || "N/A";
+              content.repos[repo.id].live_url || "N/A";
+              const repoTitle =
+                (content && content.repos && content.repos[repo.id]) || "N/A";
+              content.repos[repo.id].title || "N/A";
+              const tech =
+                (content && content.repos && content.repos[repo.id]) || "N/A";
+              content.repos[repo.id].technologies || "N/A";
               return (
                 <Repo
                   key={repo.id}
