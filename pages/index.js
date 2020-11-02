@@ -5,18 +5,27 @@ import utilStyles from "../styles/utils.module.css";
 import Repo from "../components/Repo";
 import content from "../content.json";
 
-export default function Home() {
-  const [repos, setRepos] = React.useState([]);
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  const url = "https://api.github.com/users/MPiotrowska/starred?per_page=10";
+  const response = await fetch(url);
+  const repos = await response.json();
 
+  // By returning { props: posts }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      repos,
+    },
+    revalidate: 1,
+  };
+}
+
+export default function Home({ repos }) {
   const year = new Date().getFullYear();
 
   React.useEffect(() => {
-    const url = "https://api.github.com/users/MPiotrowska/starred?per_page=10";
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setRepos(data);
-      });
+    console.log(repos);
   }, []);
 
   return (
@@ -35,8 +44,39 @@ export default function Home() {
       <main>
         <h2>Projects</h2>
         <div className="grid">
-          {repos.length > 0 &&
+          {repos.map((repo) => {
+            console.log(repo.html_url);
+            const repoDescription = content.repos[repo.id].description || "N/A";
+
+            const repoDomain =
+              (content & content.repos && content.repos[repo.id].live_url) ||
+              "https://monia.dev";
+
+            const repoTitle =
+              (repo.id &&
+                content &&
+                content.repos &&
+                content.repos[repo.id].title) ||
+              "N/A";
+
+            const tech =
+              (repo.id && content && content.repos && content.repos[repo.id]) ||
+              "N/A";
+
+            return (
+              <Repo
+                key={repo.id}
+                name={repoTitle}
+                url={repo.html_url}
+                description={repoDescription || "N/A"}
+                liveSite={repoDomain}
+                technologies={tech}
+              />
+            );
+          })}
+          {/* {repos && repos.length > 0 ?
             repos.map((repo) => {
+              console.log(repo.id)
               const repoDescription =
                 (repo.id && content && content.repos && content.repos[repo.id]) || "N/A";
               content.repos[repo.id].description || "N/A";
@@ -59,7 +99,8 @@ export default function Home() {
                   technologies={tech}
                 />
               );
-            })}
+            }) : <p>Loading...</p>
+          } */}
         </div>
       </main>
 
