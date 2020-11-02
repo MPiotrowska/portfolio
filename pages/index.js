@@ -40,29 +40,32 @@ export default function Home({ repos, content }) {
         <h2>Projects</h2>
         <div className="grid">
           {repos.map((repo) => {
+
+            const repoExists = typeof content.repos[repo.id] !== 'undefined'
+            const fallbackRepo = content.repos["0"]
             
-            const repoDescription = content.repos[repo.id]  && content.repos[repo.id].description || "N/A";
+            const repoDescription = repoExists &&  content.repos[repo.id].description || fallbackRepo.description;
 
             const repoDomain =
-              content.repos[repo.id]  && content.repos[repo.id].live_url || "https://monia.dev";
+              repoExists &&  content.repos[repo.id].live_url || fallbackRepo.live_url;
 
             const repoTitle =
               (repo.id &&
                 content &&
                 content.repos &&
-                content.repos[repo.id]  && content.repos[repo.id].title) ||
-              "N/A";
+                repoExists &&  content.repos[repo.id].title) ||
+                fallbackRepo.title;
 
             const tech =
-              (repo.id && content && content.repos && content.repos[repo.id]  && content.repos[repo.id].technologies) ||
-              "N/A";
+              (repo.id && content && content.repos && repoExists &&  content.repos[repo.id].technologies) ||
+              fallbackRepo.technologies;
 
             return (
               <Repo
                 key={repo.id}
                 name={repoTitle}
                 url={repo.html_url}
-                description={repoDescription || "N/A"}
+                description={repoDescription}
                 liveSite={repoDomain}
                 technologies={tech}
               />

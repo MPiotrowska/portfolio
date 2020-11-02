@@ -11,6 +11,12 @@
         "twitter": "https://twitter.com/PiotrowsMonika"
     },
     "repos": {
+        "0": {
+            "technologies": ["react.svg", "js.svg", "css.svg"],
+            "title": "Starred project that doesn't have more info yet",
+            "description": "It was probably built with React?",
+            "live_url": "https://monia.dev/"
+        },
         "266368775": {
             "technologies": ["html.svg", "js.svg", "sass.svg"],
             "title": "Landing page",
