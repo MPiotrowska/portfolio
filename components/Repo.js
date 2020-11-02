@@ -10,7 +10,7 @@ const Repo = (props) => {
         </span>
       </header>
 
-      <p>{props.description}</p>
+      <p>{props.description || 'No description available'}</p>
       <footer className="cardFooter">
         <a
           className="cardButton"
