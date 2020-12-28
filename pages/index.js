@@ -22,6 +22,7 @@ export async function getStaticProps() {
 
 export default function Home({ repos, content }) {
   const year = new Date().getFullYear();
+  console.log(repos);
 
   return (
     <Layout>

@@ -46,6 +46,12 @@
             "title": "A quiz application",
             "description": "A trivia app built using Create React App.",
             "live_url": "https://monika-quiz-app.netlify.app/"
+        }, 
+        "310859994": {
+            "technologies": ["react.svg", "js.svg", "css.svg"],
+            "title": "Design Agency Website",
+            "description": "Design Agency website built with NextJS and deployed on Netlify.",
+            "live_url": "https://design-agency-site.netlify.app/"
         }
     }
 }
