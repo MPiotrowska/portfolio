@@ -1,57 +1,57 @@
 {
-    "intro": {
-        "heading": "Hi, I'm Monika!",
-        "subHeading": "I love building stuff!"
+  "intro": {
+    "heading": "Hi, I'm Monika!",
+    "subHeading": "I love building stuff!"
+  },
+  "profile": "Creative and driven individual who is passionate, curious and excited by new technologies, I'm currently working as a frontend developer and getting exposed to various frontend frameworks and technologies to enhance my skill set. I am a fast learner with attention to detail as well as great interpersonal skills and a relaxed temperament.",
+  "profile_sub": "I am a fast learner with attention to detail as well as great interpersonal skills and a relaxed temperament. ",
+  "navigation": {
+    "linkedin": "https://www.linkedin.com/in/monika-piotrowska-660a5b4a/",
+    "github": "https://github.com/MPiotrowska",
+    "twitter": "https://twitter.com/PiotrowsMonika"
+  },
+  "repos": {
+    "416774707": {
+      "technologies": ["react.svg", "js.svg", "typescript.svg", "tailwind.svg"],
+      "title": "Todo App",
+      "description": "This project was build using React, Typescript and Tailwind.",
+      "live_url": "https://monika-todo.netlify.app/"
     },
-    "profile": "Creative and driven individual who is passionate, curious and excited by new technologies, I'm currently working as a freelance developer and getting exposed to various frontend frameworks and technologies to enhance my skill set. I am a fast learner with attention to detail as well as great interpersonal skills and a relaxed temperament.",
-    "profile_sub": "I am a fast learner with attention to detail as well as great interpersonal skills and a relaxed temperament. ",
-    "navigation": {
-        "linkedin":"https://www.linkedin.com/in/monika-piotrowska-660a5b4a/",
-        "github": "https://github.com/MPiotrowska",
-        "twitter": "https://twitter.com/PiotrowsMonika"
+    "266368775": {
+      "technologies": ["html.svg", "js.svg", "sass.svg"],
+      "title": "Landing page",
+      "description": "This project was build usingt ES6 and Sass. One of my first projects using SASS.",
+      "live_url": "https://monia-landing-page.netlify.app/"
     },
-    "repos": {
-        "0": {
-            "technologies": ["react.svg", "js.svg", "css.svg"],
-            "title": "Starred project that doesn't have more info yet",
-            "description": "It was probably built with React?",
-            "live_url": "https://monia.dev/"
-        },
-        "266368775": {
-            "technologies": ["html.svg", "js.svg", "sass.svg"],
-            "title": "Landing page",
-            "description": "This project was build usingt ES6 and Sass. One of my first projects using SASS.",
-            "live_url": "https://monia-landing-page.netlify.app/"
-        },
-        "275899585": {
-            "technologies": ["react.svg", "js.svg"],
-            "title": "Weather app",
-            "description": "Weather app build with Create React App using the openweathermap api.",
-            "live_url": "https://weather-web-app-react.netlify.app/"
-        },
-        "281733001": {
-            "technologies": ["react.svg", "js.svg", "css.svg"],
-            "title": "Airbnb clone",
-            "description": "Airbnb clone site build with React and context API for state management.",
-            "live_url": "https://mini-airbnb.netlify.app/"
-        },
-        "287553898": {
-            "technologies": ["react.svg", "js.svg"],
-            "title": "My portolio site, built on NextJS.",
-            "description": "My portfolio build with React and Nextjs. I'll be updating it regularly with all new projects.",
-            "live_url": "https://www.monia.dev/"
-        },
-        "307406324": {
-            "technologies": ["react.svg", "js.svg", "css.svg"],
-            "title": "A quiz application",
-            "description": "A trivia app built using Create React App.",
-            "live_url": "https://monika-quiz-app.netlify.app/"
-        }, 
-        "310859994": {
-            "technologies": ["react.svg", "js.svg", "css.svg"],
-            "title": "Design Agency Website",
-            "description": "Design Agency website built with NextJS and deployed on Netlify.",
-            "live_url": "https://design-agency-site.netlify.app/"
-        }
+    "275899585": {
+      "technologies": ["react.svg", "js.svg"],
+      "title": "Weather app",
+      "description": "Weather app build with Create React App using the openweathermap api.",
+      "live_url": "https://weather-web-app-react.netlify.app/"
+    },
+    "281733001": {
+      "technologies": ["react.svg", "js.svg", "css.svg"],
+      "title": "Airbnb clone",
+      "description": "Airbnb clone site build with React and context API for state management.",
+      "live_url": "https://mini-airbnb.netlify.app/"
+    },
+    "287553898": {
+      "technologies": ["react.svg", "js.svg"],
+      "title": "My portolio site, built on NextJS.",
+      "description": "My portfolio build with React and Nextjs. I'll be updating it regularly with all new projects.",
+      "live_url": "https://www.monia.dev/"
+    },
+    "307406324": {
+      "technologies": ["react.svg", "js.svg", "css.svg"],
+      "title": "A quiz application",
+      "description": "A trivia app built using Create React App.",
+      "live_url": "https://monika-quiz-app.netlify.app/"
+    },
+    "310859994": {
+      "technologies": ["react.svg", "js.svg", "css.svg"],
+      "title": "Design Agency Website",
+      "description": "Design Agency website built with NextJS and deployed on Netlify.",
+      "live_url": "https://design-agency-site.netlify.app/"
     }
+  }
 }
