@@ -14,7 +14,7 @@
     "416774707": {
       "technologies": ["react.svg", "js.svg", "typescript.svg", "tailwind.svg"],
       "title": "Todo App",
-      "description": "This project was build using React, Typescript and Tailwind.",
+      "description": "This project was build using React and context API, Typescript and Tailwind.",
       "live_url": "https://monika-todo.netlify.app/"
     },
     "266368775": {
