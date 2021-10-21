@@ -6,15 +6,19 @@ import Repo from "../components/Repo";
 import content from "../content.json";
 
 export async function getStaticProps() {
-  const test = content;
+  
   const url = "https://api.github.com/users/MPiotrowska/starred?per_page=10";
   const response = await fetch(url);
   const repos = await response.json();
 
+//   fetch(url)
+// .then(response => response.json())
+// .then(data => console.log(data)) - not using async/await
+
   return {
     props: {
-      repos,
-      content: test,
+      repos: repos,
+      content: content,
     },
     revalidate: 1,
   };
@@ -40,6 +44,7 @@ export default function Home({ repos, content }) {
         <h2>Projects</h2>
         <div className="grid">
           {repos.map((repo) => {
+            
 
             const repoExists = typeof content.repos[repo.id] !== 'undefined'
             const fallbackRepo = content.repos["0"]
